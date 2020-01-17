@@ -26,13 +26,13 @@ sudo -u vagrant -i exec $SHELL
 sudo -u vagrant echo 'gem: --no-document' >> /home/vagrant/.gemrc
 
 # install ruby
-sudo -u vagrant -i /home/vagrant/.rbenv/bin/rbenv install 2.6.5
-sudo -u vagrant -i /home/vagrant/.rbenv/bin/rbenv global 2.6.5
-sudo -u vagrant -i /home/vagrant/.rbenv/versions/2.6.5/bin/gem install bundler --no-document
-sudo -u vagrant -i /home/vagrant/.rbenv/versions/2.6.5/bin/bundle config git.allow_insecure true
+sudo -u vagrant -i /home/vagrant/.rbenv/bin/rbenv install 2.7.0
+sudo -u vagrant -i /home/vagrant/.rbenv/bin/rbenv global 2.7.0
+sudo -u vagrant -i /home/vagrant/.rbenv/versions/2.7.0/bin/gem install bundler --no-document
+sudo -u vagrant -i /home/vagrant/.rbenv/versions/2.7.0/bin/bundle config git.allow_insecure true
 
 # gems + rails
-sudo -u vagrant -i /home/vagrant/.rbenv/versions/2.6.5/bin/gem install rails -v 6.0.1 --no-document
+sudo -u vagrant -i /home/vagrant/.rbenv/versions/2.7.0/bin/gem install rails -v 6.0.2.1 --no-document
 
 # rehash
 sudo -u vagrant -i /home/vagrant/.rbenv/bin/rbenv rehash
@@ -47,3 +47,5 @@ sudo -u postgres psql -c "CREATE DATABASE vagrant_test OWNER vagrant;"
 # redis
 sudo apt-get install -y build-essential tcl
 sudo add-apt-repository ppa:chris-lea/redis-server -y && sudo apt-get update && sudo apt-get install -y redis-server
+
+echo "-----> 👍"
