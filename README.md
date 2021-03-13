@@ -7,7 +7,7 @@ A Vagrantfile + Provision script to install Rails 6 and common dependencies.
 - Ruby 3.0.0
 - PostgreSQL 12.6
 - Redis 5.0.6
-- NodeJS 12.13.0
+- NodeJS 14.16.0
 - Rails 6.1.3
 
 # Creating Rails app
