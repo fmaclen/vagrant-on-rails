@@ -3,12 +3,13 @@ A Vagrantfile + Provision script to install Rails 6 and common dependencies.
 
 # What's Included
 - Ubuntu 20.04 (Focal)
+- NodeJS 14.16.0
+- Yarn 1.22.5
 - rbenv 1.1.2
 - Ruby 3.0.0
+- Rails 6.1.3
 - PostgreSQL 12.6
 - Redis 5.0.6
-- NodeJS 14.16.0
-- Rails 6.1.3
 
 # Creating Rails app
 During provision, a PostgreSQL user `vagrant` with `superuser` role will be created for the databases: `vagrant_test` and `vagrant_development`.
