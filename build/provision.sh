@@ -2,7 +2,7 @@
 
 # adding the Node.js and Yarn repositories
 sudo apt install curl
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
@@ -26,20 +26,20 @@ sudo -u vagrant -i exec $SHELL
 sudo -u vagrant echo 'gem: --no-document' >> /home/vagrant/.gemrc
 
 # install ruby
-sudo -u vagrant -i /home/vagrant/.rbenv/bin/rbenv install 2.7.0
-sudo -u vagrant -i /home/vagrant/.rbenv/bin/rbenv global 2.7.0
-sudo -u vagrant -i /home/vagrant/.rbenv/versions/2.7.0/bin/gem install bundler --no-document
-sudo -u vagrant -i /home/vagrant/.rbenv/versions/2.7.0/bin/bundle config git.allow_insecure true
+sudo -u vagrant -i /home/vagrant/.rbenv/bin/rbenv install 3.0.0
+sudo -u vagrant -i /home/vagrant/.rbenv/bin/rbenv global 3.0.0
+sudo -u vagrant -i /home/vagrant/.rbenv/versions/3.0.0/bin/gem install bundler --no-document
+sudo -u vagrant -i /home/vagrant/.rbenv/versions/3.0.0/bin/bundle config git.allow_insecure true
 
 # gems + rails
-sudo -u vagrant -i /home/vagrant/.rbenv/versions/2.7.0/bin/gem install rails -v 6.0.2.1 --no-document
+sudo -u vagrant -i /home/vagrant/.rbenv/versions/3.0.0/bin/gem install rails -v 6.1.3 --no-document
 
 # rehash
 sudo -u vagrant -i /home/vagrant/.rbenv/bin/rbenv rehash
 
 # postgresql
 sudo apt-get install -y postgresql postgresql-client postgresql-contrib libpq-dev
-sudo sh -c "echo 'host all all 0.0.0.0/0 md5' >> /etc/postgresql/9.*/main/pg_hba.conf"
+sudo sh -c "echo 'host all all 0.0.0.0/0 md5' >> /etc/postgresql/12.*/main/pg_hba.conf"
 sudo -u postgres psql -c "CREATE USER vagrant SUPERUSER;"
 sudo -u postgres psql -c "CREATE DATABASE vagrant_development OWNER vagrant;"
 sudo -u postgres psql -c "CREATE DATABASE vagrant_test OWNER vagrant;"
