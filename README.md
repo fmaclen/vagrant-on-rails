@@ -16,7 +16,7 @@ After provision is finished, enter the VM with `vagrant ssh`, it should automati
 
 To reach the Rails server from your host machine simply run `rails s -b 0.0.0.0` and point your browser to `http://192.168.55.200:3000`
 
-<img width="1165" alt="Screen Shot 2019-11-10 at 4 15 04 PM" src="https://user-images.githubusercontent.com/1434675/72579721-caf84080-388e-11ea-9842-ed772be1fc4c.png">
+<img width="1165" alt="Rails 6.1.3 / Ruby 3.0.0" src="https://user-images.githubusercontent.com/1434675/111034489-e6ec6900-83e3-11eb-93b4-949a2214524f.png">
 
 # Things to consider
 I put together the provision script based on a few others I found on GitHub and [elsewhere](https://gorails.com/setup/ubuntu/18.04).
